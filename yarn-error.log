@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add webpack webpack-cli webpack-dev-servereslint -D
+
+PATH: 
+  C:\Program Files\AdoptOpenJDK\jdk-8.0.242.08-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\andre.ribeiro\AppData\Local\Android\Sdk\platform-tools;C:\Users\andre.ribeiro\AppData\Local\Android\Sdk\tools;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\andre.ribeiro\AppData\Local\Microsoft\WindowsApps;C:\Users\andre.ribeiro\AppData\Local\Yarn\bin;C:\Users\andre.ribeiro\AppData\Local\Android\Sdk\platform-tools;C:\Users\andre.ribeiro\AppData\Local\Android\Sdk\tools;C:\Users\andre.ribeiro\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  8.11.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/webpack-dev-servereslint: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "mini-blog-react",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
