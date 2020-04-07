@@ -7,6 +7,10 @@
     "build": "webpack --config ./webpack.config.js",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --config webpack.config.js"
   },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
@@ -31,8 +35,4 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  }
 }
