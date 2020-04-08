@@ -5,9 +5,11 @@ import rootReducer from './ducks/rootReducer';
 import rootSaga from './ducks/rootSaga';
 
 import { PublicationsState } from './ducks/publications/types';
+import { AuthorsState } from './ducks/authors/types';
 
 export interface ApplicationState {
   publications: PublicationsState;
+  authors: AuthorsState;
 }
 
 const sagaMiddleware = createSagaMiddleware();

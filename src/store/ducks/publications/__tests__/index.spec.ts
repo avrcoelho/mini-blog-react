@@ -2,7 +2,7 @@ import reducer, { INITIAL_STATE } from '../';
 import * as PublicationsActions from '../actions';
 import { Publication } from '../types';
 
-describe('Characters reducer', () => {
+describe('Publications reducer', () => {
   it('DEFAULT', () => {
     const action = {
       type: undefined,

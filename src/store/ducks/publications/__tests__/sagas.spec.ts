@@ -5,6 +5,7 @@ import api from '../../../../services/api';
 
 import { loadSuccess, loadFailure } from '../actions';
 import { publications } from '../sagas';
+import { Publication } from '../types';
 
 const apiMock = new MockAdapter(api);
 
@@ -12,7 +13,7 @@ describe('Publications Saga', () => {
   const dispatch = jest.fn();
 
   it('should be able to fetch Publications', async () => {
-    const publicationData = [
+    const publicationData: Publication[] = [
       {
         title: 'AssCo has revamped the theory of versioning',
         body:

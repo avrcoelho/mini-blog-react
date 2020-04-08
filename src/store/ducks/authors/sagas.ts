@@ -3,13 +3,13 @@ import { call, put } from 'redux-saga/effects';
 
 import api from '../../../services/api';
 import { loadSuccess, loadFailure } from './actions';
-import { Publication } from './types';
+import { Author } from './types';
 
-export function* publications(): SagaIterator {
+export function* authors(): SagaIterator {
   try {
-    const { data }: { data: Publication[] } = yield call(
+    const { data }: { data: Author[] } = yield call(
       api.get,
-      'v2/5be5e3fa2f000082000fc3f8',
+      'v2/5be5e3ae2f00005b000fc3f6',
     );
 
     yield put(loadSuccess(data));
