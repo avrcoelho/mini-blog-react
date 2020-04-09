@@ -5,7 +5,7 @@
       "babel-plugin-styled-components",
       "react-hot-loader/babel",
       {
-        "minify": false,
+        "minify": true,
         "transpileTemplateLiterals": false
       }
     ]

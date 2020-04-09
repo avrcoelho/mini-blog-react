@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type Props = {
+  width?: number;
+};
+
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -9,19 +13,27 @@ export const Container = styled.div`
 `;
 
 export const PostList = styled.ul`
-  width: 100%;
-  max-width: 760px;
+  flex: 1;
   list-style: none;
   margin-top: 20px;
 `;
 
-export const SelectContainer = styled.div`
+export const Options = styled.div`
   width: 100%;
   max-width: 760px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+`;
+
+export const SelectContainer = styled.div`
+  width: 100%;
+  max-width: ${(props: Props) => `${props.width}px`};
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 15px;
+  margin-right: 10px;
 
   label {
     color: #999;
@@ -31,7 +43,6 @@ export const SelectContainer = styled.div`
 
 export const Select = styled.select`
   width: 100%;
-  max-width: 400px;
   height: 36px;
   color: #333;
   font-size: 14px;

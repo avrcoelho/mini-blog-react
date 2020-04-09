@@ -13,15 +13,15 @@ type Prop = {
 const Post: React.FC<Prop> = ({ data }) => (
   <Container>
     <Header>
-      <Title>{data.title}</Title>
-      <Date>
+      <Title data-testid="title-post">{data.title}</Title>
+      <Date data-testid="date-post">
         {formatDistanceToNow(data.metadata.publishedAt, {
           locale: pt,
         })}
       </Date>
     </Header>
-    <Body>{data.body}</Body>
-    <Author>{data.author.name}</Author>
+    <Body data-testid="body-post">{data.body}</Body>
+    <Author data-testid="author-post">{data.author.name}</Author>
   </Container>
 );
 

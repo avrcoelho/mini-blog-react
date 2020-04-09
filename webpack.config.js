@@ -9,9 +9,6 @@ const config = {
     // nome do arquivo que vai ser gerado
     filename: 'bundle.js',
   },
-  devServer: {
-    contentBase: join(__dirname, 'public'),
-  },
   module: {
     rules: [
       {

@@ -6,13 +6,13 @@ import store from './store';
 import GlobalStyles from './styles/GlobalStyles';
 
 import Header from './components/Header';
-import List from './components/List';
+import Posts from './pages/Posts';
 
 const App: React.FC = () => (
   <Provider store={store}>
     <GlobalStyles />
     <Header />
-    <List />
+    <Posts />
   </Provider>
 );
 
