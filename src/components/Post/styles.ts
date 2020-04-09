@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.li`
   width: 100%;
   padding: 10px;
   border: solid 1px #dedede;

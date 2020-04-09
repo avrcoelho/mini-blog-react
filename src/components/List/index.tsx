@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { ApplicationState } from '../../store';
@@ -9,7 +9,7 @@ import { Publication } from '../../store/ducks/publications/types';
 
 import Post from '../Post';
 
-import { Container, PostList } from './styles';
+import { Container, PostList, SelectContainer, Select } from './styles';
 
 export type Post = {
   title: string;
@@ -25,6 +25,7 @@ export type Post = {
 
 const List: React.FC = () => {
   const dispatch = useDispatch();
+  const [authorSelected, setAuthorSelected] = useState<string>('');
 
   const {
     data: publications,
@@ -55,12 +56,33 @@ const List: React.FC = () => {
     [publications, authors],
   );
 
-  console.log(posts);
-
   return (
     <Container>
+      {authors.length ? (
+        <SelectContainer>
+          <label>Filtrar por author</label>
+          <Select
+            value={authorSelected}
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+              setAuthorSelected(e.target.value)
+            }
+            data-testid="select-author">
+            <option value="">Todos</option>
+            {authors.map((author: Author) => (
+              <option key={author.id} value={author.id}>
+                {author.name}
+              </option>
+            ))}
+          </Select>
+        </SelectContainer>
+      ) : null}
       <PostList>
-        {posts.map((post: Post) => (
+        {(authorSelected
+          ? posts.filter(
+              (post: Post) => post.author.id === Number(authorSelected),
+            )
+          : posts
+        ).map((post: Post) => (
           <Post key={post.title} data={post} />
         ))}
       </PostList>
