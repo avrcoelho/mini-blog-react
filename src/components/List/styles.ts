@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.ul`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
 `;
 
 export const PostList = styled.ul`

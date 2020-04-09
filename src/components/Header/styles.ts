@@ -11,7 +11,7 @@ export const Container = styled.header`
 
 export const LogoContainer = styled.div`
   width: 100%;
-  max-width: 992px;
+  max-width: 760px;
   height: 100%;
   display: flex;
   flex-direction: row;
