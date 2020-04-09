@@ -5,7 +5,7 @@ import { Container, LogoContainer, Title } from './styles';
 const Header: React.FC = () => (
   <Container>
     <LogoContainer>
-      <Title>Blog André</Title>
+      <Title>Blog</Title>
     </LogoContainer>
   </Container>
 );

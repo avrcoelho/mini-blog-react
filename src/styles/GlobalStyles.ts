@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     outline: 0;
   }
   body {
-    background: #fff !important;
+    background: #f5f5f5 !important;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     width: 100%;

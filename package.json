@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "date-fns": "^2.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -45,6 +46,7 @@
     "jest": "^25.2.7",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "prettier": "^2.0.4",
+    "react-hot-loader": "^4.12.20",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3",

@@ -9,7 +9,19 @@ import { Publication } from '../../store/ducks/publications/types';
 
 import Post from '../Post';
 
-import { Container } from './styles';
+import { Container, PostList } from './styles';
+
+export type Post = {
+  title: string;
+  body: string;
+  metadata: {
+    publishedAt: number;
+  };
+  author: {
+    id: number;
+    name: string;
+  };
+};
 
 const List: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,7 +38,7 @@ const List: React.FC = () => {
   useEffect(() => {
     dispatch(PublicationsActions.loadRequest());
     dispatch(AuthorsActions.loadRequest());
-  }, []);
+  }, [dispatch]);
 
   const posts = useMemo<any>(
     () =>
@@ -40,12 +52,18 @@ const List: React.FC = () => {
             },
           }))
         : [],
-    [],
+    [publications, authors],
   );
+
+  console.log(posts);
 
   return (
     <Container>
-      <Post data={posts} />
+      <PostList>
+        {posts.map((post: Post) => (
+          <Post key={post.title} data={post} />
+        ))}
+      </PostList>
     </Container>
   );
 };
