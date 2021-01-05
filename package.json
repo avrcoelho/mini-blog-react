@@ -9,7 +9,7 @@
     "test": "jest --env=jest-environment-jsdom-sixteen"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-fns": "^2.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
